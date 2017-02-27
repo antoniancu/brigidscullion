@@ -1,0 +1,208 @@
+nav.navbar.navbar-default {
+  z-index: 99999; }
+
+.buy-service-inner {
+  min-height: 300px; }
+
+.additional-service-inner {
+  min-height: 300px; }
+
+.sold-property-section .sold-property-inner .property-thumbnail {
+  width: 100%;
+  height: auto; }
+
+.sold-property-section .address {
+  font: 13px/20px 'Raleway', sans-serif;
+  display: block;
+  text-transform: capitalize;
+  padding: 15px 10px;
+  min-height: 74px;
+  transition: all 0.7s; }
+
+.properties-archive .property-listing {
+  position: relative; }
+
+.properties-archive .sold {
+  color: white;
+  background: red;
+  text-transform: uppercase;
+  position: absolute;
+  padding: 0.25em 2em;
+  z-index: 999;
+  top: 0;
+  box-shadow: 0 0 13px -1px #d84949;
+  right: 0; }
+
+.title {
+  text-transform: uppercase; }
+
+.listing-image-main-gallery {
+  max-height: 500px;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 0 10px 3px #d4d4d4;
+  margin-bottom: 1em; }
+  .listing-image-main-gallery .slick-slide > img {
+    width: 100%; }
+  .listing-image-main-gallery .slick-arrow {
+    border: none;
+    background: none; }
+  .listing-image-main-gallery .slick-prev, .listing-image-main-gallery .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 9999;
+    color: white;
+    font-size: 3em; }
+  .listing-image-main-gallery .slick-next {
+    right: 0; }
+
+.gallery-thumbnail {
+  padding-right: 0.5em;
+  border: 3px solid white;
+  box-shadow: 0 0 4px 2px #d4d4d4; }
+
+.acf-map {
+  width: 100%;
+  height: 200px;
+  border: white solid 3px;
+  box-shadow: 0 0 5px 3px #f3f3f3;
+  margin: 20px 0; }
+  .acf-map img {
+    max-width: inherit !important; }
+
+.property-page {
+  font-family: 'Raleway',sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-bottom: 2em; }
+  .property-page .main h2 {
+    text-transform: uppercase;
+    border-bottom: 1px solid #E5597C; }
+  .property-page ul {
+    padding-left: 0; }
+    .property-page ul li {
+      list-style-type: none; }
+  .property-page ul.floors-list li > h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.75em;
+    font-size: 1.3em; }
+  .property-page ul.rooms-list {
+    padding-left: 1em; }
+    .property-page ul.rooms-list li {
+      border-bottom: 1px dotted grey;
+      padding-bottom: 1em;
+      margin-bottom: 2em; }
+    .property-page ul.rooms-list .room-name {
+      margin-bottom: 0.25em; }
+
+.cta.property {
+  font-family: 'Raleway',sans-serif;
+  background: #2f2929;
+  text-align: center;
+  padding: 3em;
+  color: white; }
+  .cta.property h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    font-size: 2.7em; }
+  .cta.property form input, .cta.property form textarea {
+    padding: 1em;
+    border-radius: 2px;
+    background: white;
+    border: none;
+    margin-bottom: 1.25em;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px; }
+  .cta.property form input {
+    width: 100%; }
+  .cta.property form textarea {
+    width: 100%;
+    margin-bottom: 2em; }
+  .cta.property form input[type="submit"] {
+    width: auto;
+    float: none;
+    border-radius: 4px;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 1em;
+    letter-spacing: 1px;
+    font-size: 1.5em; }
+
+.sidebar .listing-id-status {
+  text-align: right;
+  border-bottom: 1px solid #E5597C;
+  padding-bottom: 1em; }
+  .sidebar .listing-id-status .sold {
+    background: red;
+    color: white;
+    text-transform: uppercase;
+    float: left;
+    font-size: 0.8em;
+    padding: 0.5em 1em; }
+  .sidebar .listing-id-status .property-id {
+    display: block;
+    padding-top: 0.3em; }
+
+.sidebar h2.listing-price {
+  text-align: right;
+  border-bottom: 1px solid #E5597C;
+  padding-bottom: 0.5em; }
+
+.sidebar .listing-properties-general,
+.sidebar .listing-properties-evaluation,
+.sidebar .listing-properties-dimensions,
+.sidebar .listing-features {
+  border-bottom: 1px solid #E5597C;
+  padding-bottom: 1em; }
+
+.sidebar h3 {
+  font-size: 1.5em; }
+
+.sidebar ul.listing-features .feature-title {
+  text-decoration: underline; }
+
+.sidebar ul.listing-features ul.features-items-list {
+  display: inline-table;
+  margin-bottom: .2em; }
+
+.listing-form-questions h3 {
+  margin-bottom: 1em;
+  font-size: 1.4em;
+  font-weight: 900; }
+
+.listing-form-questions form input, .listing-form-questions form textarea {
+  padding: 1em;
+  border-radius: 2px;
+  background: white;
+  border: 1px solid black;
+  margin-bottom: 1em;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 1px; }
+
+.listing-form-questions form input {
+  width: 100%; }
+
+.listing-form-questions form textarea {
+  width: 100%;
+  margin-bottom: 1em; }
+
+.listing-form-questions form input[type="submit"] {
+  width: 100%;
+  float: none;
+  border-radius: 4px;
+  background: none;
+  color: #E5597C;
+  border: 1px solid #E5597C;
+  padding: 1em;
+  letter-spacing: 1px; }
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    padding-left: 30px; } }
+
+/*# sourceMappingURL=style.css.map */

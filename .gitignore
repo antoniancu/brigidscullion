@@ -1,0 +1,8 @@
+/.ftpquota
+.DS_Store
+/.idea
+/.htaccess
+/wp-content/uploads/
+/srdb3
+/wp-config.php
+/config.codekit3

@@ -1,0 +1,169 @@
+/*dropdown menu on hover css*/
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {display: block;/*border-top: solid #D54848;*/margin-top: -3px;}
+.caret{display: none;}
+}
+
+@media (max-width: 1200px){
+.heading{font: 22px/30px "proxima_novathin";height: 94px;padding: 15px 10px;}
+
+/*inner page*/
+.buy-service-inner .main-view > p{padding: 20px 0;font: 18px/24px "proxima_novaregular";}
+.properties-inner{min-height: 180px;}
+.property-listing .address{min-height: 90px;}
+}
+@media (max-width: 992px){
+/*.navbar-collapse.collapse{display:none!important;height: auto !important;}
+.navbar-collapse.collapse.collapse.in {display: block !important;}*/
+.navbar-collapse{background-color: #111111; margin-top: 30px;}
+.navbar-nav{ margin: 0;}
+.main-nav, .main-nav nav.navbar.navbar-default{margin-top: -40px;width: 100%;}
+.navbar-default .navbar-nav>li>a{text-align: left;border:0 !important; color: #fff;}
+.caret{color: #fff; display: none;}
+.navbar-default .navbar-nav li.dropdown .caret { display: block; }
+
+.navbar-default .navbar-nav>li>a::after{display: none !important;}
+.navbar-default .navbar-nav>li.dropdown>.caret{top: 18px; margin-top: 0; z-index: 55;}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a{color: #ffffff;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {background-color: #D84949;color: #FFF;}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{background-color: #D84949;color: #FFF;}
+
+
+.heading {font: 17px/24px "proxima_novathin";padding: 10px 10px;}
+.main-nav.pull-right {height: 0px !important;}
+#middle ul li{padding-right: 5%;}
+#middle ul {font: 20px/24px "proxima_novaregular";}
+}
+
+@media (max-width: 767px){
+.heading{font: 20px/30px "proxima_novathin";height: 94px;padding: 15px 10px;}
+.call-us a{display: table;margin: 8px auto;}
+ul.social-icons{display: table;margin: 0px auto;float: none;}
+.contact-details{margin-bottom: 20px;}
+.logo-icon img{margin: 5px 0;}
+.address-details{text-align: left;}
+.cpy-right {text-align: center;}
+body.home.page .no-place h1{font-size: 26px;}
+.pr-content{padding: 0 0 0 30px;}
+.sold-property-inner{max-width: 350px; margin: 0 auto 30px auto;}
+.sold-property-section{padding: 70px 0 40px;}
+.copyright-section{font: 14px/20px "proxima_novaregular";padding-top: 15px;}
+
+
+.buy-service-inner{margin-bottom: 30px;}
+#middle ul li{width: 100%;}
+.property-listing {max-width: 270px;margin: 0 auto 20px;}
+
+.inner-page h2.page-title{font: 30px/36px "proxima_novalight";}
+.no-place{width: 100% !important;/*padding: 0 15px 15px !important;*/height: auto !important;}
+
+div#banner, div#banner .container{height: 200px;}
+body.home div#banner, body.home div#banner .container{/*height: 300px;*/}
+
+div.half-width{width: 100% !important; margin-left: 0 !important;margin-right: 0 !important;}
+.address-details{float: left;}
+.logo-icon{margin-top: 0 ;}
+}
+
+@media (max-width: 599px){
+.buy-rent-section .pr-image{display: table; margin: 0 auto 30px auto;float: none;}
+.pr-content{padding: 0;}
+.buy-rent-section{padding: 60px 0;}
+.heading{padding: 15px 10px;}
+}
+
+@media (max-width: 499px){
+body.home.page .no-place h1{font-size: 22px;/*margin: 20px 0 10px;*/} 
+body.home.page .no-place .tagline{font: 15px/24px "proxima_novalight";}
+
+.no-place .tagline{font: 18px/24px "proxima_novalight";}
+.buy-service-inner .main-view{padding: 20px 15px;}
+.additional-service-inner .main-view{padding: 10px 30px;}
+
+.additional-service-inner .main-view .content h2{font: 22px/30px 'proxima_novalight';}
+.property-title{font: 13px/30px "proxima_novalight";}
+}
+
+@media (max-width: 359px){
+.logo> a img{max-width: 80%;}
+}
+
+/* ..............................................responsive css by nipun............................................... */
+
+
+/* iphone (portrait) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 359px) {
+
+
+}
+
+
+/* iphone (landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 359px) and (orientation : landscape) {
+.property-listing:nth-child(odd){max-width: 48%;margin-right: 2%;float: left;}
+.property-listing:nth-child(even){max-width: 48%;margin-left: 2%;float: left;}
+.property-title{font: 12.5px/30px "proxima_novalight";}
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 360px) and (max-width : 599px) {
+
+
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 360px) and (max-width : 599px) and (orientation : landscape) {
+.property-listing:nth-child(odd){max-width: 48%;margin-right: 2%;float: left;}
+.property-listing:nth-child(even){max-width: 48%;margin-left: 2%;float: left;}
+.property-title{font: 12.5px/30px "proxima_novalight";}
+
+}
+
+
+/* Mini Tab (portrait) ----------- */
+@media only screen and (min-width : 600px) and (max-width : 767px) {
+/* Styles */
+}
+
+
+/* Mini Tab (landscape) ----------- */
+@media only screen and (min-width : 600px) and (max-width : 767px) and (orientation : landscape) {
+.property-listing:nth-child(odd){max-width: 48%;margin-right: 2%;float: left;}
+.property-listing:nth-child(even){max-width: 48%;margin-left: 2%;float: left;}
+
+
+}
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+
+}
+
+
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+.heading {font: 15px/24px "proxima_novathin";padding: 5px 10px;height: 56px;}
+.logo-icon {margin-top: 56px;}
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1025px) and (max-width : 1200px) {
+/*.heading{font: 22px/30px "proxima_novathin";height: 94px;padding: 15px 10px;}
+*/
+
+}
