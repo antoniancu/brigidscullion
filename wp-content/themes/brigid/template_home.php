@@ -21,32 +21,7 @@ get_header(); ?>
                     </div>
                     <?php } ?>
                 <div class="pr-content">
-                  <?php  $morecon = get_the_content_with_formatting();
-                  $span_id = get_the_id();
-                  $span_id = "more-".$span_id;
-                  $after_more = explode( '<span id="'.$span_id.'"></span>', $morecon ); ?>
-                    <div class="articles-new-first">
-				    <?php if( $after_more[0] ) {
-					echo $content = $after_more[0];
-				    } ?>
-					<?php  if( $after_more[1] ) { ?>
-				   <a href="javascript:void();" id="readmore" class="read_more">Read More ></a>
-						<?php } ?>
-
-				</div>
-				<div class="articles-new-second">
-				 <?php  if( $after_more[1] ) {
-					echo $content = $after_more[1];
-				    }
-					
-				?>
-				  <br><a href="javascript:void();" id="less" class="read_more">< Less</a>			
-				
-                </div>
-             
-                <?php if(get_field('contact_button_text')){ ?>
-                    <a class="contact-btn" href="<?php if(get_field('contact_button_url')){echo get_field('contact_button_url');} ?>" target="_blank"><?php echo get_field('contact_button_text'); ?></a>
-                <?php } ?>
+                    <?php the_content(); ?>
                 </div>
 				 
                     <?php  endwhile;
@@ -83,6 +58,49 @@ get_header(); ?>
                                     </a>
                                 </div>
                             <?php
+                            }
+                        endwhile;
+                    else :
+                        // no rows found
+                    endif;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-buyers">
+        <div class="container">
+            <?php echo esc_html(get_field('for_buyers')); ?>
+        </div>
+
+        <div class="buyer-property-section">
+            <div class="container">
+                <div class="row">
+                    <?php
+                    if( have_rows('featured_buyer_properties') ):
+                        while ( have_rows('featured_buyer_properties') ) : the_row();
+                            $buyer_property_post = get_sub_field('buyer_property');
+                            $featured_buyer_title = esc_html(get_sub_field('title'));
+                            if( $featured_buyer_title || $buyer_property_post ) {
+                                ?>
+                                <!--                                --><?php //var_dump(get_sub_field('buyer_property'));?>
+                                <div class="col-sm-4">
+                                    <a href="<?php echo get_permalink( get_sub_field('buyer_property') );?>">
+                                        <div class="buyer-property-inner">
+                                            <div class="heading">
+                                                <?php echo esc_html( get_sub_field('title') ); ?>
+                                            </div>
+                                            <?php  $buyer_image = wp_get_attachment_image_src( get_post_thumbnail_id
+                                            ( $buyer_property_post->ID ), 'buyer_property_image'); ?>
+                                            <img src="<?php echo esc_url($buyer_image[0]); ?>" class="property-thumbnail">
+                                            <div class="buyer_address"><?php echo get_the_title( get_sub_field
+                                                ('buyer_property') );
+                                                ?></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
                             }
                         endwhile;
                     else :
