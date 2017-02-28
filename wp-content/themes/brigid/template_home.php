@@ -69,6 +69,49 @@ get_header(); ?>
         </div>
     </section>
 
+    <section id="for-buyers">
+        <div class="container">
+            <?php echo esc_html(get_field('for_buyers')); ?>
+        </div>
+
+        <div class="buyer-property-section">
+            <div class="container">
+                <div class="row">
+                    <?php
+                    if( have_rows('featured_buyer_properties') ):
+                        while ( have_rows('featured_buyer_properties') ) : the_row();
+                            $buyer_property_post = get_sub_field('buyer_property');
+                            $featured_buyer_title = get_sub_field('title');
+                            if( $featured_buyer_title || $buyer_property_post ) {
+                                ?>
+                                <!--                                --><?php //var_dump(get_sub_field('buyer_property'));?>
+                                <div class="col-sm-4">
+                                    <a href="<?php echo get_permalink( get_sub_field('buyer_property') );?>">
+                                        <div class="buyer-property-inner">
+                                            <div class="heading">
+                                                <?php echo esc_html( get_sub_field('title') ); ?>
+                                            </div>
+                                            <?php  $buyer_image = wp_get_attachment_image_src( get_post_thumbnail_id
+                                            ( $buyer_property_post->ID ), 'buyer_property_image'); ?>
+                                            <img src="<?php echo $buyer_image[0]; ?>" class="property-thumbnail">
+                                            <div class="buyer_address"><?php echo get_the_title( get_sub_field
+                                                ('buyer_property') );
+                                                ?></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                            }
+                        endwhile;
+                    else :
+                        // no rows found
+                    endif;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 <?php get_footer();
