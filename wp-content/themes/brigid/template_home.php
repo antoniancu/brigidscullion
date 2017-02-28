@@ -71,7 +71,7 @@ get_header(); ?>
 
     <section id="for-buyers">
         <div class="container">
-            <?php echo esc_html(get_field('for_buyers')); ?>
+            <?php echo get_field('for_buyers'); ?>
         </div>
 
         <div class="buyer-property-section">
