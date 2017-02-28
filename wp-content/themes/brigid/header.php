@@ -89,7 +89,7 @@
                         <li><a href="<?php esc_url(the_field('linked_in','option')); ?>"><i class="social-icon linked-in"></i></a></li>
                         <li><a href="<?php esc_url(the_field('pinterest','option')); ?>"><i class="social-icon pinterest"></i></a></li>
                         <li><a href="<?php esc_url(the_field('houzz','option')); ?>"><i class="social-icon houzz"></i></a></li>
-
+                        <a href=""></a>
 						<li>	<?php 
 						 $fr = $languages['fr']['url'];
 						 $en = $languages['en']['url'];
@@ -98,9 +98,9 @@
 						 $lang_id = $l['id'];
 						if(($active==1) &&($lang_id==1)){
 							 ?>
-								 <a class="fr" href="<?php echo $fr ;?>">FR</a>
+								 <a href="<?php echo $fr ;?>"><i class="social-icon french"></i></a>
 								 <?php }elseif(($active==1) &&($lang_id==4)){?>
-                                 <a class="fr"  style="color:#fff;" href="<?php echo $en;?>">EN</a> <span>
+                                 <a href="<?php echo $en;?>"><i class="social-icon english"></i></a> <span>
 								
 						<?php }}?> </li>
 					</ul>
