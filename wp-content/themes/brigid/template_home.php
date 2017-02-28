@@ -81,7 +81,7 @@ get_header(); ?>
                     if( have_rows('featured_buyer_properties') ):
                         while ( have_rows('featured_buyer_properties') ) : the_row();
                             $buyer_property_post = get_sub_field('buyer_property');
-                            $featured_buyer_title = get_sub_field('title');
+                            $featured_buyer_title = esc_html(get_sub_field('title'));
                             if( $featured_buyer_title || $buyer_property_post ) {
                                 ?>
                                 <!--                                --><?php //var_dump(get_sub_field('buyer_property'));?>
@@ -93,7 +93,7 @@ get_header(); ?>
                                             </div>
                                             <?php  $buyer_image = wp_get_attachment_image_src( get_post_thumbnail_id
                                             ( $buyer_property_post->ID ), 'buyer_property_image'); ?>
-                                            <img src="<?php echo $buyer_image[0]; ?>" class="property-thumbnail">
+                                            <img src="<?php echo esc_url($buyer_image[0]); ?>" class="property-thumbnail">
                                             <div class="buyer_address"><?php echo get_the_title( get_sub_field
                                                 ('buyer_property') );
                                                 ?></div>
