@@ -1,4 +1,5 @@
 $color_pink: #E5597C;
+$color_red: #d84949;
 // MENU
 nav.navbar.navbar-default {
 z-index: 99999;
@@ -291,5 +292,55 @@ z-index: 99999;
 @media screen and (min-width: 768px) {
   .sidebar {
     padding-left: 30px;
+  }
+}
+
+
+
+ul.social-icons {
+  i.social-icon {
+
+    position: relative;
+    mask-size: 20px 18px;
+    height: 27px;
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 13px;
+    content: '';
+    background-color: #aaa;
+    display: block;
+    transition: all 0.5s ease;
+    &:hover {
+
+      background: #000;
+    }
+  }
+
+  li {
+    transition: all 1s ease;
+    &:hover {
+      background: #aaa;
+    }
+  }
+  .facebook {
+    mask: url("../assets/img/social-icons/facebook.svg") no-repeat;
+  }
+  .instagram {
+    mask: url("../assets/img/social-icons/instagram.svg") no-repeat;
+  }
+  .pinterest {
+    mask: url("../assets/img/social-icons/pinterest.svg") no-repeat;
+  }
+  .linked-in {
+    mask: url("../assets/img/social-icons/linkedin.svg") no-repeat;
+  }
+  .houzz {
+    mask: url("../assets/img/social-icons/houzz.svg") no-repeat;
+  }
+  .french {
+    mask: url("../assets/img/social-icons/french.svg") no-repeat;
+  }
+  .english {
+    mask: url("../assets/img/social-icons/english.svg") no-repeat;
   }
 }
