@@ -17,6 +17,7 @@ nav.navbar.navbar-default {
   text-transform: capitalize;
   padding: 15px 10px;
   min-height: 74px;
+  -webkit-transition: all 0.7s;
   transition: all 0.7s; }
 
 .properties-archive .property-listing {
@@ -205,4 +206,52 @@ nav.navbar.navbar-default {
   .sidebar {
     padding-left: 30px; } }
 
-/*# sourceMappingURL=style.css.map */
+ul.social-icons i.social-icon {
+  position: relative;
+  -webkit-mask-size: 20px 18px;
+          mask-size: 20px 18px;
+  height: 27px;
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 13px;
+  content: '';
+  background-color: #aaa;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  ul.social-icons i.social-icon:hover {
+    background: #000; }
+
+ul.social-icons li {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
+  ul.social-icons li:hover {
+    background: #aaa; }
+
+ul.social-icons .facebook {
+  -webkit-mask: url("../assets/img/social-icons/facebook.svg") no-repeat;
+          mask: url("../assets/img/social-icons/facebook.svg") no-repeat; }
+
+ul.social-icons .instagram {
+  -webkit-mask: url("../assets/img/social-icons/instagram.svg") no-repeat;
+          mask: url("../assets/img/social-icons/instagram.svg") no-repeat; }
+
+ul.social-icons .pinterest {
+  -webkit-mask: url("../assets/img/social-icons/pinterest.svg") no-repeat;
+          mask: url("../assets/img/social-icons/pinterest.svg") no-repeat; }
+
+ul.social-icons .linked-in {
+  -webkit-mask: url("../assets/img/social-icons/linkedin.svg") no-repeat;
+          mask: url("../assets/img/social-icons/linkedin.svg") no-repeat; }
+
+ul.social-icons .houzz {
+  -webkit-mask: url("../assets/img/social-icons/houzz.svg") no-repeat;
+          mask: url("../assets/img/social-icons/houzz.svg") no-repeat; }
+
+ul.social-icons .french {
+  -webkit-mask: url("../assets/img/social-icons/french.svg") no-repeat;
+          mask: url("../assets/img/social-icons/french.svg") no-repeat; }
+
+ul.social-icons .english {
+  -webkit-mask: url("../assets/img/social-icons/english.svg") no-repeat;
+          mask: url("../assets/img/social-icons/english.svg") no-repeat; }
