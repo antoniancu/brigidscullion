@@ -34,6 +34,7 @@ get_header(); ?>
         <div class="sold-property-section">
             <div class="container">
                 <div class="row">
+                    <h2> Properties for sale and recently sold</h2>
                     <?php
                     if( have_rows('home_featured_properties') ):
                         while ( have_rows('home_featured_properties') ) : the_row();
@@ -65,6 +66,9 @@ get_header(); ?>
                     endif;
                     ?>
                 </div>
+                <div class="all-properties-cta">
+                    <a href="<?php echo bloginfo('url') . '/properties'; ?>" class="contact-btn"><?php echo _e('View all properties for sale'); ?></a>
+                </div>
             </div>
         </div>
     </section>
@@ -94,9 +98,11 @@ get_header(); ?>
                                             <?php  $buyer_image = wp_get_attachment_image_src( get_post_thumbnail_id
                                             ( $buyer_property_post->ID ), 'buyer_property_image'); ?>
                                             <img src="<?php echo esc_url($buyer_image[0]); ?>" class="property-thumbnail">
-                                            <div class="buyer_address"><?php echo get_the_title( get_sub_field
+                                            <div class="address"><?php echo get_the_title( get_sub_field
                                                 ('buyer_property') );
-                                                ?></div>
+                                                ?>
+                                                <br>Read their story here..
+                                            </div>
                                         </div>
                                     </a>
                                 </div>
