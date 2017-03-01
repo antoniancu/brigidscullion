@@ -21,6 +21,7 @@ z-index: 99999;
     .property-thumbnail {
       width: 100%;
       height: auto;
+      max-height: 239px;
     }
   }
 }
@@ -322,25 +323,115 @@ ul.social-icons {
       background: #aaa;
     }
   }
+
   .facebook {
     mask: url("../assets/img/social-icons/facebook.svg") no-repeat;
   }
+
   .instagram {
     mask: url("../assets/img/social-icons/instagram.svg") no-repeat;
   }
+
   .pinterest {
     mask: url("../assets/img/social-icons/pinterest.svg") no-repeat;
   }
+
   .linked-in {
     mask: url("../assets/img/social-icons/linkedin.svg") no-repeat;
   }
+
   .houzz {
     mask: url("../assets/img/social-icons/houzz.svg") no-repeat;
   }
+
   .french {
     mask: url("../assets/img/social-icons/french.svg") no-repeat;
   }
+
   .english {
     mask: url("../assets/img/social-icons/english.svg") no-repeat;
   }
+}
+
+ul.social-icons.footer {
+
+
+  i.social-icon {
+    position: relative;
+    mask-size: 20px 18px;
+    height: 27px;
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 13px;
+    content: '';
+    background-color: #aaa;
+    display: block;
+    transition: all 0.5s ease;
+    &:hover {
+
+      background: #000;
+    }
+  }
+
+  li {
+    transition: all 1s ease;
+
+    &:hover {
+      background: none;
+    }
+
+    a {
+      height: auto;
+    }
+  }
+}
+
+
+.pr-content, p{
+  font: 16px/32px 'proxima_novaregular';
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.buy-rent-section {
+  padding-bottom: 60px;
+}
+
+h1 {
+  line-height: 1.25;
+}
+
+.sold-property-section {
+  padding: 60px 0;
+  h2 {
+    padding: 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
+.all-properties-cta {
+  text-align: center;
+  margin: 30px 0 0;
+}
+
+.buyer-property-section {
+  background: #eee;
+  margin-top: 30px;
+
+  @extend .sold-property-section;
+
+  .buyer-property-inner {
+    background: white;
+    @extend .sold-property-inner;
+  }
+}
+
+.buy-rent-section .pr-image {
+  margin: 0 50px 30px 0;
+}
+
+#for-buyers {
+  padding: 60px 0 0px;
 }

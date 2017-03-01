@@ -96,13 +96,15 @@
 						 foreach($languages as $l){
 						 $active	= $l['active'];
 						 $lang_id = $l['id'];
-						if(($active==1) &&($lang_id==1)){
+						 if ( ( $active==1 ) && ( $lang_id==1 ) ) {
 							 ?>
 								 <a href="<?php echo $fr ;?>"><i class="social-icon french"></i></a>
-								 <?php }elseif(($active==1) &&($lang_id==4)){?>
-                                 <a href="<?php echo $en;?>"><i class="social-icon english"></i></a> <span>
+								 <?php } elseif ( ( $active==1) && ( $lang_id==4 ) ) { ?>
+                                 <a href="<?php echo $en; ?>"><i class="social-icon english"></i></a> <span>
 								
-						<?php }}?> </li>
+						<?php }
+						 }?>
+                        </li>
 					</ul>
 				</div>
 			</div>
