@@ -84,23 +84,27 @@
 				<div class="col-sm-8">
 				
 					<ul class="social-icons">
-						<?php if(get_field('linked_in','option')){ ?><li><a href="<?php echo get_field('linked_in','option'); ?>" class="linkedin" TARGET="_blank">Linkedin</a></li><?php } ?>
-						<?php if(get_field('facebook','option')){ ?><li><a href="<?php echo get_field('facebook','option'); ?>" class="facebook" TARGET="_blank">Facebook</a></li><?php } ?>
-						<?php if(get_field('pinterest','option')){ ?>	<li><a href="<?php echo get_field('pinterest','option'); ?>" class="pinterest" TARGET="_blank">Pinterest</a></li><?php } ?>
-						<?php if(get_field('instagram','option')){ ?><li><a href="<?php echo get_field('instagram','option'); ?>" class="smart" TARGET="_blank">Smart</a></li><?php } ?>
+                        <li><a href="<?php esc_url(the_field('facebook','option' )); ?>"><i class="social-icon facebook"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('instagram','option')); ?>"><i class="social-icon instagram"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('linked_in','option')); ?>"><i class="social-icon linked-in"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('pinterest','option')); ?>"><i class="social-icon pinterest"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('houzz','option')); ?>"><i class="social-icon houzz"></i></a></li>
+                        <a href=""></a>
 						<li>	<?php 
 						 $fr = $languages['fr']['url'];
 						 $en = $languages['en']['url'];
 						 foreach($languages as $l){
 						 $active	= $l['active'];
 						 $lang_id = $l['id'];
-						if(($active==1) &&($lang_id==1)){
+						 if ( ( $active==1 ) && ( $lang_id==1 ) ) {
 							 ?>
-								 <a class="fr" href="<?php echo $fr ;?>">FR</a>
-								 <?php }elseif(($active==1) &&($lang_id==4)){?>
-                                 <a class="fr"  style="color:#fff;" href="<?php echo $en;?>">EN</a> <span>
+								 <a href="<?php echo $fr ;?>"><i class="social-icon french"></i></a>
+								 <?php } elseif ( ( $active==1) && ( $lang_id==4 ) ) { ?>
+                                 <a href="<?php echo $en; ?>"><i class="social-icon english"></i></a> <span>
 								
-						<?php }}?> </li>
+						<?php }
+						 }?>
+                        </li>
 					</ul>
 				</div>
 			</div>

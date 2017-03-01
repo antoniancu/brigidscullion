@@ -61,12 +61,12 @@
                     <?php } ?>
                 </div>
                 <div class="col-sm-4">
-                    <ul class="social-icons">
-                        <?php if(get_field('linked_in','option')){ ?>  <li><a href="<?php echo get_field('linked_in','option'); ?>" class="linkedin" TARGET="_blank">linkedin</a></li><?php } ?>
-                        <?php if(get_field('facebook','option')){ ?>  <li><a href="<?php echo get_field('facebook','option'); ?>" class="facebook" TARGET="_blank">facebook</a></li><?php } ?>
-                        <?php if(get_field('pinterest','option')){ ?> <li><a href="<?php echo get_field('pinterest','option'); ?>" class="pinterest" TARGET="_blank">linterest</a></li><?php } ?>
-                        <?php if(get_field('instagram','option')){ ?><li><a href="<?php echo get_field('instagram','option'); ?>" class="smart" TARGET="_blank">Smart</a></li><?php } ?>
-                        <!-- <li><a href="fr/index.php" class="fr">fr</a></li> -->
+                    <ul class="social-icons footer">
+                        <li><a href="<?php esc_url(the_field('facebook','option' )); ?>"><i class="social-icon facebook"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('instagram','option')); ?>"><i class="social-icon instagram"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('linked_in','option')); ?>"><i class="social-icon linked-in"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('pinterest','option')); ?>"><i class="social-icon pinterest"></i></a></li>
+                        <li><a href="<?php esc_url(the_field('houzz','option')); ?>"><i class="social-icon houzz"></i></a></li>
                     </ul>
                 </div>
             </div>
