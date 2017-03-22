@@ -100,11 +100,11 @@ get_header( 'property'); ?>
                 <span class="property-id">#<?php esc_html(the_field('id'));  ?></span>
             </div>
             <h2 class="listing-price">$<?php echo money_format( '%!.0i', esc_html( get_field('asking_price') ) );
-            echo $price_per_month ? '/month' : '';?></h2>
+            echo $price_per_month ? brigid_stringtranslate( __('/month', 'brigid-theme') ) : '';?></h2>
             <ul class="listing-properties-general">
-                <li>Property type: <?php esc_html(the_field('property_type'));  ?></li>
+                <li><?php _e('Property type: ', 'brigid-theme'); esc_html(the_field('property_type'));  ?></li>
                 <?php if ( get_field('year_of_construction')) { ?>
-                    <li>Year built: <?php esc_html(the_field('year_of_construction'));  ?></li>
+                    <li><?php _e('Year built: ', 'brigid-theme'); esc_html(the_field('year_of_construction'));  ?></li>
                 <?php } ?>
             </ul>
             <div class="property-address">
@@ -127,17 +127,17 @@ get_header( 'property'); ?>
 
             <?php
             $property_evaluations = array(
-                'Municipal Evaluation' => esc_html(get_field('building_evaluation') ),
-                'Land Evaluation' => esc_html(get_field('lot_evaluation') ),
-                'Municipal Taxes' => esc_html(get_field('municipal_taxes') ),
-                'School Taxes' => esc_html(get_field('school_taxes') ),
-                'Additional Revenue' => esc_html(get_field('additional_revenue') ),
+                __('Municipal Evaluation', 'brigid-theme') => esc_html( get_field('building_evaluation')  ),
+                __('Land Evaluation', 'brigid-theme') => esc_html( get_field('lot_evaluation') ),
+                __('Municipal Taxes', 'brigid-theme') => esc_html( get_field('municipal_taxes') ),
+                __('School Taxes', 'brigid-theme') => esc_html( get_field('school_taxes') ),
+                __('Additional Revenue', 'brigid-theme') => esc_html( get_field('additional_revenue') ),
             );
 
             if ( $property_evaluations[0] ) {
             ?>
             <div class="listing-properties-evaluation">
-                <h3>Evaluations and Taxes</h3>
+                <h3><?php _e('Evaluations and Taxes', 'brigid-theme') ?></h3>
                 <ul>
                     <?php foreach ( $property_evaluations as $evaluation_label => $evaluation_value ) {
                         if ( $evaluation_value ) {
@@ -153,15 +153,15 @@ get_header( 'property'); ?>
             <?php
 
                 $property_dimensions = array(
-                    'Lot size' => esc_html(get_field('lot_size')),
-                    'Lot area' => esc_html(get_field('lot_area')),
-                    'Building size' => esc_html(get_field('building_size')),
-                    'Living area' => esc_html(get_field('living_area')),
+                    __('Lot size', 'brigid-theme') => esc_html(get_field('lot_size')),
+                    __('Lot area', 'brigid-theme') => esc_html(get_field('lot_area')),
+                    __('Building size', 'brigid-theme') => esc_html(get_field('building_size')),
+                    __('Living area', 'brigid-theme') => esc_html(get_field('living_area')),
                 );
             if ( $property_dimensions[0] ) { ?>
 
                 <div class="listing-properties-dimensions">
-                    <h3>Dimensions</h3>
+                    <h3><?php _e('Dimensions', 'brigid-theme') ?></h3>
                     <ul>
                         <?php foreach ($property_dimensions as $property_dimension_label => $dimension_value) {
                             if ( $dimension_value ) {
@@ -177,7 +177,7 @@ get_header( 'property'); ?>
             <?php
             if (have_rows('features')) { ?>
                 <ul class="listing-features">
-                <h3>Features</h3>
+                <h3><?php _e('Features', 'brigid-theme') ?></h3>
 
                     <?php while (have_rows('features')) {
                         the_row();
@@ -199,15 +199,27 @@ get_header( 'property'); ?>
 
             <?php if ( !$sold_status ) { ?>
             <div class="listing-form-questions">
-                <h3 class="form-title">Questions about this listing?</h3>
-                <?php echo do_shortcode( '[contact-form-7 id="908" title="Questions about this listing?"]' ); ?>
+                <h3 class="form-title"><?php _e('Questions about this listing?', 'brigid-theme') ?></h3>
+                <?php
+                    if (ICL_LANGUAGE_CODE == 'en') {
+                        echo do_shortcode('[contact-form-7 id="908" title="Questions about this listing?"]');
+                    }else{
+                        echo do_shortcode('[contact-form-7 id="1872" title="Questions à propos de cette propriété?"]');
+                    };
+                ?>
             </div>
             <?php } ?>
         </div>
     </div>
     <div class="cta property">
-        <h2 class="form-title">Interested in this property?</h2>
-        <?php echo do_shortcode( '[contact-form-7 id="907" title="INTERESTED IN THIS PROPERTY"]' ); ?>
+        <h2 class="form-title"><?php _e('Interested in this property?', 'brigid-theme') ?></h2>
+        <?php
+            if (ICL_LANGUAGE_CODE == 'en') {
+                echo do_shortcode( '[contact-form-7 id="907" title="INTERESTED IN THIS PROPERTY"]' );
+            }else{
+                echo do_shortcode( '[contact-form-7 id="1873" title="Intéressé(e) par cette propriété?"]' );
+            };
+        ?>
         <div class="clearfix"></div>
     </div>
 <?php get_footer()?>
