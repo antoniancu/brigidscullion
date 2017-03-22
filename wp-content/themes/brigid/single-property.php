@@ -5,7 +5,7 @@ Template Name: Property Post Type template
 get_header( 'property'); ?>
 
     <div class="container property-page">
-        <h2 class="title">Property Listing</h2>
+        <h2 class="title"><?php _e('Property Listing', 'brigid-theme') ?></h2>
         <div class="col-sm-8 main">
             <div class="row">
                 <?php the_title('<h1>','</h1>'); ?>
@@ -39,7 +39,7 @@ get_header( 'property'); ?>
                 </div>
                 <?php if (get_the_content()) { ?>
                     <div class="details">
-                        <h2>Details</h2>
+                        <h2><?php _e('Details', 'brigid-theme') ?></h2>
                         <?php the_content(); ?>
                     </div>
                 <?php } ?>
@@ -90,10 +90,10 @@ get_header( 'property'); ?>
         <div class="col-sm-4 sidebar">
             <div class="listing-id-status">
                 <?php
-                $sold_status = get_field('sold_status') == 1 ? 'Sold' : false ;
+                $sold_status = get_field('sold_status') == 1 ? brigid_stringtranslate( __('Sold' , 'brigid-theme') ) : false ;
                 $price_per_month = get_field('price_per_month');
                 if ( $sold_status ) {
-                    if ( $price_per_month ) { $sold_status = 'Rented'; };
+                    if ( $price_per_month ) { $sold_status = brigid_stringtranslate( __('Rented', 'brigid-theme') ); };
                     ?>
                     <span class="sold"><?php echo $sold_status ?></span>
                 <?php } ?>
