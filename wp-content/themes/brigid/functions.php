@@ -638,6 +638,10 @@ function my_acf_init() {
     acf_update_setting('google_api_key', 'AIzaSyAvcMA3CRKKvNeIsqJcMfKiG6PMym_6IL0');
 }
 
+function brigid_stringtranslate ($text) {
+    return $text;
+}
+
 add_action('acf/init', 'my_acf_init');
 
 //class Custom_Walker_Nav_Menu extends Walker_Nav_Menu
