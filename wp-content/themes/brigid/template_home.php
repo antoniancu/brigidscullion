@@ -34,7 +34,7 @@ get_header(); ?>
         <div class="sold-property-section">
             <div class="container">
                 <div class="row">
-                    <h2> Properties for sale and recently sold</h2>
+                    <h2><?php _e('Properties for sale and recently sold', 'brigid-theme') ?></h2>
                     <?php
                     if( have_rows('home_featured_properties') ):
                         while ( have_rows('home_featured_properties') ) : the_row();
