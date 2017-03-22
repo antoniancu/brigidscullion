@@ -40,7 +40,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     echo $content = $after_more[0];
                     } ?>
                     <?php  if( $after_more[1] ) { ?>
-                  <a href="javascript:void(0);" id="readmore_service" class="read_more">Read More ></a>
+                  <a href="javascript:void(0);" id="readmore_service" class="read_more"><?php _e('Read More', 'brigid-theme') ?></a>
                         <?php } ?>
 
                 </div>

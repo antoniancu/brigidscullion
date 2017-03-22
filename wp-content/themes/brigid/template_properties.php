@@ -43,7 +43,7 @@ if (ICL_LANGUAGE_CODE == 'en') {
                     echo $content = $after_more[0];
                     } ?>
                     <?php  if( $after_more[1] ) { ?>
-                    <br><a href="javascript:void();" id="readmore_property" class="read_more">Read More ></a>
+                    <br><a href="javascript:void();" id="readmore_property" class="read_more"><?php _e('Read More', 'brigid-theme') ?></a>
                         <?php } ?>
 
                 </div>
@@ -105,13 +105,13 @@ if (ICL_LANGUAGE_CODE == 'en') {
 								?>
 									<div class="col-md-3 col-sm-4">
                                         <?php
-                                        $sold_status = get_field('sold_status') == 1 ? 'Sold' : false ;
+                                        $sold_status = get_field('sold_status') == 1 ? brigid_stringtranslate( __('Sold' , 'brigid-theme') ) : false ;
                                         $price_per_month = get_field('price_per_month');
                                         ?>
                                         <a href="<?php the_permalink(); ?>">
                                             <div class="property-listing">
                                                 <?php  if (  $sold_status ) {
-                                                    if ( $price_per_month ) { $sold_status = 'Rented'; };
+                                                    if ( $price_per_month ) { $sold_status = brigid_stringtranslate( __('Rented', 'brigid-theme') ); };
                                                 ?>
                                                 <div class="sold"><?php echo $sold_status ?></div>
                                                 <?php } ?>

@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="contact-details">
-                        <h4>Contact details</h4>
+                        <h4><?php _e('Contact details', 'brigid-theme') ?></h4>
                         <?php if(get_field('contact_details','option')){ ?> <p><?php echo get_field('contact_details','option'); ?></p><?php } ?>
                         <?php if(get_field('phone_number','option')){ ?>  <div class="call-us">
                             <a href="tel:+<?php echo get_field('phone_number','option'); ?>"><?php echo get_field('phone_number','option'); ?></a>
@@ -39,7 +39,7 @@
                 <div class="col-sm-5">
                     <?php if(get_field('address','option')){ ?>
                     <div class="address-details">
-                        <h4>Address</h4>
+                        <h4><?php _e('Address', 'brigid-theme') ?></h4>
                         <div class="location">
                             <?php echo get_field('address','option'); ?>
                         </div>
