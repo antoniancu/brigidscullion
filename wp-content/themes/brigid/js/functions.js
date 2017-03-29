@@ -132,8 +132,8 @@
 } )( jQuery );
 jQuery(document).ready(function ($) {
   $('.slick-carousel').slick({
-		prevArrow: '<button type="button" class="slick-prev"><</button>',
-		nextArrow: '<button type="button" class="slick-next">></button>',
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		nextArrow: '<button type="button" class="slick-next"></button>',
 		centerMode: true
 	});
 });
