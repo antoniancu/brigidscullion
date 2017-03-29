@@ -35,6 +35,53 @@ nav.navbar.navbar-default {
   box-shadow: 0 0 13px -1px #d84949;
   right: 0; }
 
+#testimonials-section {
+  background-color: #111;
+  color: white;
+  padding: 130px 0px 60px;
+  position: relative; }
+  #testimonials-section .testimonial-text {
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 30px; }
+  #testimonials-section .testimonial-author {
+    float: right;
+    font-size: 18px; }
+    #testimonials-section .testimonial-author:before {
+      content: '-'; }
+    #testimonials-section .testimonial-author .testimonial {
+      position: relative; }
+  #testimonials-section .slick-arrow {
+    border: none;
+    background: none; }
+    #testimonials-section .slick-arrow:before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      display: block;
+      background-image: url("../images/move-to-next.png");
+      background-size: contain;
+      background-repeat: no-repeat; }
+    @media screen and (max-width: 980px) {
+      #testimonials-section .slick-arrow {
+        display: none !important; } }
+  #testimonials-section .slick-prev, #testimonials-section .listing-image-main-gallery .slick-next, .listing-image-main-gallery #testimonials-section .slick-next {
+    position: absolute;
+    top: 10%;
+    z-index: 9999;
+    color: white;
+    font-size: 3em;
+    left: -10%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  #testimonials-section .slick-next {
+    position: absolute;
+    top: 10%;
+    z-index: 9999;
+    color: white;
+    font-size: 3em;
+    right: -10%; }
+
 .title {
   text-transform: uppercase; }
 
@@ -314,4 +361,5 @@ h1 {
   margin: 0 50px 30px 0; }
 
 #for-buyers {
-  padding: 60px 0 0px; }
+  padding: 60px 0 40px; }
+/*# sourceMappingURL=style.css.map */

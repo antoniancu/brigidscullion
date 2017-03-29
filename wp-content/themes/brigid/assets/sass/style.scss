@@ -53,6 +53,79 @@ z-index: 99999;
   }
 }
 
+$arrow: url('../images/move-to-next.png');
+
+// TESTIMONIAL CAROUSEL HOME PAGE
+
+#testimonials-section {
+  background-color: #111;
+  color: white;
+  padding: 130px 0px 60px;
+  position: relative;
+
+  .testimonial-text {
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-author {
+    float: right;
+    font-size: 18px;
+
+    &:before {
+      content: '-';
+    }
+
+    .testimonial {
+      position: relative;
+    }
+  }
+
+
+  .slick-arrow{
+    border: none;
+    background: none;
+    &:before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      display: block;
+      background-image: $arrow;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 980px){
+      display: none !important;
+    }
+  }
+
+
+
+  .slick-prev {
+    position: absolute;
+    top: 10%;
+    z-index: 9999;
+    color: white;
+    font-size: 3em;
+    left: -10%;
+    transform: rotate(180deg);
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 10%;
+    z-index: 9999;
+    color: white;
+    font-size: 3em;
+    right: -10%;
+  }
+}
+
+
+
+
 ///SINGLE PROPERTY PAGE
 .title {
   text-transform: uppercase;
@@ -433,5 +506,5 @@ h1 {
 }
 
 #for-buyers {
-  padding: 60px 0 0px;
+  padding: 60px 0 40px;
 }
