@@ -72,6 +72,26 @@ get_header(); ?>
         </div>
     </section>
 
+    <section id="testimonials-section">
+       <div class="container">
+           <div class="slick-carousel" data-slick='{"centerMode": false, "autoplay": true, "autoplaySpeed": 5000, "fade": true}'>
+               <?php if(have_rows('testimonials')) :
+
+                   while(have_rows('testimonials') ) : the_row();
+                       $testimonial = get_sub_field('testimonial');
+                       $testimonial_content = wp_strip_all_tags($testimonial->post_content);
+                       $testimonial_author = get_field('testimonial_by', $testimonial->ID);
+                   ?>
+                       <div class="testimonial">
+                            <p class="testimonial-text"><?= $testimonial_content ?></p>
+                           <span class="testimonial-author"><?= $testimonial_author?></span>
+                       </div>
+                   <?php endwhile;
+               endif; ?>
+           </div>
+       </div>
+    </section>
+
     <section id="for-buyers">
         <div class="container">
             <?php echo get_field('for_buyers'); ?>
